@@ -1,18 +1,22 @@
-<?php 
+<html>
+<head>
+ 	<title>Ejercicio de Hora</title>
+</head>
+<body>
+		<?php
 
-if (date("m") > 8 && date("m") < 13) {
-	echo "Estamos en primavera";
-	
-}
-if (date("m") > 5 && date("m") < 10) {
-	if(date("d") < 21 && date("m") == 6)  {
-		break;		
-	}
-	if(date("d") > 20 && date("m") == 9) {
-		break;
-	}
-	
-	echo "Estamos invierno";
-}
-
-?>
+			if ((date("H") > 0) && (date("H") < 13))
+		    {
+				echo date("H:i:s a")."<br>Es de Mañana";
+			}
+		    if ((date("H") > 12) && (date("H") < 20))
+		    {
+				echo date("H:i:s a")."<br>Es de Tarde";
+			}
+			if ((date("H") > 19) && (date("H") < 24))
+			{
+				echo date("H:i:s a")."<br>Es de Noche";
+			}
+		?>
+</body>
+</html>
